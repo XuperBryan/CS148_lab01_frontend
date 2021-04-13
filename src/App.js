@@ -18,7 +18,11 @@ function App() {
         <p>
           Hello, World!
         </p>
-        <p>The current time is {currentTime}.</p>
+        {currentTime !== 0 &&
+          <p>
+            The current time is {currentTime}.
+          </p>
+        }
       </header>
     </div>
   );
