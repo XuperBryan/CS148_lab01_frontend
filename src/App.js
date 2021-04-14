@@ -6,9 +6,10 @@ function App() {
   const [currentTime, setCurrentTime] = useState(0);
 
   useEffect(() => {
-    fetch('https://rec-cen-hello-world-backend.herokuapp.com/time').then(res => res.json()).then(data => {
-      setCurrentTime(data.time);
-    });
+    fetch('http://localhost:8080/https://rec-cen-hello-world-backend.herokuapp.com/time').then(res => res.json()).then(data => {
+        setCurrentTime(data.time);
+        console.log(currentTime);
+      });
   }, []);
 
   return (
